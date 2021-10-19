@@ -72,7 +72,6 @@ target/
 # Jupyter NB Checkpoints
 .ipynb_checkpoints/
 
-
 # Mac OS-specific storage files
 .DS_Store
 
@@ -83,3 +82,6 @@ target/
 # Mypy cache
 .mypy_cache/
 
+# Avoid pushing data nor models
+data/
+models/ 
