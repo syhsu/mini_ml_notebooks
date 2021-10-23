@@ -84,4 +84,5 @@ target/
 
 # Avoid pushing data nor models
 data/
-models/ 
+models/
+artifacts/
