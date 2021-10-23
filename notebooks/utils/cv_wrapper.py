@@ -1,4 +1,4 @@
-class NestedCVWrapper():
+class LeaveOneGroupOutKFold_CVWrapper():
     def __init__(self, outer_cv, inner_cv):
         self.outer_cv = outer_cv
         self.inner_cv = inner_cv
