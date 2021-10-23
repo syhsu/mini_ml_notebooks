@@ -2,5 +2,4 @@
 Minimum skeleton for ml notebooks
 
 # Notes
-## Add requirements.txt
-pip freeze > requirements.txt
+- Add requirements.txt: pip freeze > requirements.txt
