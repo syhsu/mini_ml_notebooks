@@ -2,11 +2,10 @@ class LeaveOneGroupOutKFold_CVWrapper():
     def __init__(self, outer_cv, inner_cv):
         self.outer_cv = outer_cv
         self.inner_cv = inner_cv
-    
-    def run(self, model, X, y, groups, save_model=False):
         self.nested_scores = {}
         self.nested_models = {}
-        
+    
+    def run(self, model, X, y, groups, save_model=False):
         for inx, (train_index, test_index) in enumerate(self.outer_cv.split(X, y, groups)):
             X_inner = X[train_index]
             y_inner = y[train_index]
