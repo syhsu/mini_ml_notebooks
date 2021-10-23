@@ -3,7 +3,7 @@ class LeaveOneGroupOutKFold_CVWrapper():
         self.outer_cv = outer_cv
         self.inner_cv = inner_cv
     
-    def run(self, model, X, y, groups):
+    def run(self, model, X, y, groups, save_model=False):
         self.nested_scores = {}
         self.nested_models = {}
         
@@ -21,6 +21,7 @@ class LeaveOneGroupOutKFold_CVWrapper():
                     best_model = model
                     best_score = current_score
 
-            self.nested_models[inx] = best_model
+            if save_model:
+                self.nested_models[inx] = best_model
             self.nested_scores[inx] = best_model.score(X[test_index], y[test_index])
    
