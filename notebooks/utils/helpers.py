@@ -1,4 +1,4 @@
-from typing import dict
+"""helper functions"""
 
 
 def combine_config_results(config: dict, results: dict) -> dict:
